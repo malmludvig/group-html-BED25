@@ -5,7 +5,7 @@ A basic 5-page HTML website project.
 ## Pages
 
 - **index.html** - Home page
-- **products.html** - Products listing page
+- **checkout.html** - Products listing page
 - **product.html** - Individual product page
 - **about.html** - About page
 - **contact.html** - Contact page
