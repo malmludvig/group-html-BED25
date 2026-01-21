@@ -1,0 +1,151 @@
+:root{
+  --dark:#1A5366;
+  --light:#F3F8F2;
+  --accent:#BFDDD5;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+
+  font-size:18px;        /* 🔑 GLOBALT STÖRRE TEXT */
+  line-height:1.7;      /* 🔑 lättläst */
+
+  color:var(--dark);
+  background:var(--light);
+}
+
+/* ================= NAV ================= */
+.navbar{
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:center;
+  padding:24px 0;
+}
+
+nav a{
+  margin:0 30px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+
+  font-size:20px;       /* 🔑 tydlig meny */
+
+  letter-spacing:1px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:var(--dark);
+  transition:width 0.3s ease;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* ================= FIXED TITLE ================= */
+.fixed-title{
+  background:var(--accent);
+  text-align:center;
+  padding:90px 20px;
+  position:sticky;
+  top:70px;
+  z-index:500;
+}
+
+.fixed-title h1{
+  margin:0;
+  font-size:48px;       /* 🔑 STOR rubrik */
+  letter-spacing:5px;
+}
+
+.fixed-title p{
+  margin-top:18px;
+  font-size:22px;       /* 🔑 tydlig underrubrik */
+}
+
+/* ================= HERO IMAGE ================= */
+.hero-image{
+  width:100%;
+}
+
+.hero-image img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* ================= VIDEO ================= */
+.video-section h2{
+  font-size:32px;       /* 🔑 större rubrik */
+}
+
+.video-section video{
+  width:100%;
+  max-width:700px;
+  border-radius:12px;
+  margin-top:24px;
+}
+
+/* ================= SUMMARY ================= */
+.summary h2{
+  font-size:34px;       /* 🔑 större rubrik */
+}
+
+.summary p{
+  font-size:20px;       /* 🔑 brödtext */
+}
+
+/* ================= HERITAGE STORY ================= */
+.heritage-story{
+  max-width:560px;
+  margin:60px auto 0;
+  padding:0 10px;
+
+  font-style:italic;
+  font-size:19px;       /* 🔑 lättläst vintage-text */
+  line-height:2;
+
+  color:var(--dark);
+  font-family:"Georgia","Times New Roman",serif;
+}
+
+.heritage-story p{
+  margin-bottom:30px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:26px;
+  margin-top:70px;
+
+  font-size:18px;
+}
