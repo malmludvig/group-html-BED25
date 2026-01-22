@@ -11,36 +11,43 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-
-  font-size:18px;        /* 🔑 GLOBALT STÖRRE TEXT */
-  line-height:1.7;      /* 🔑 lättläst */
-
+  font-size:18px;
+  line-height:1.7;
   color:var(--dark);
   background:var(--light);
 }
 
 /* ================= NAV ================= */
 .navbar{
-  background:#fff;
+  background:var(--accent);
   position:sticky;
   top:0;
   z-index:1000;
 }
 
 .nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px 20px;
+
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+}
+
+/* MENY I MITTEN */
+nav{
+  grid-column:2;
   display:flex;
   justify-content:center;
-  padding:24px 0;
 }
 
 nav a{
-  margin:0 30px;
+  margin:0 22px;
   text-decoration:none;
   color:var(--dark);
   font-weight:600;
-
-  font-size:20px;       /* 🔑 tydlig meny */
-
+  font-size:20px;
   letter-spacing:1px;
   position:relative;
 }
@@ -60,6 +67,41 @@ nav a:hover::after{
   width:100%;
 }
 
+/* IKONER TILL HÖGER */
+.nav-icons{
+  grid-column:3;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:16px;
+}
+
+.nav-icons a{
+  width:42px;
+  height:42px;
+  border:2px solid white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  transition:all 0.3s ease;
+}
+
+.nav-icons a:hover{
+  background:white;
+  color:var(--dark);
+}
+
+.divider{
+  width:1px;
+  height:28px;
+  background:white;
+  margin:0 6px;
+}
+
 /* ================= FIXED TITLE ================= */
 .fixed-title{
   background:var(--accent);
@@ -72,13 +114,13 @@ nav a:hover::after{
 
 .fixed-title h1{
   margin:0;
-  font-size:48px;       /* 🔑 STOR rubrik */
+  font-size:48px;
   letter-spacing:5px;
 }
 
 .fixed-title p{
   margin-top:18px;
-  font-size:22px;       /* 🔑 tydlig underrubrik */
+  font-size:22px;
 }
 
 /* ================= HERO IMAGE ================= */
@@ -102,7 +144,7 @@ nav a:hover::after{
 
 /* ================= VIDEO ================= */
 .video-section h2{
-  font-size:32px;       /* 🔑 större rubrik */
+  font-size:32px;
 }
 
 .video-section video{
@@ -114,11 +156,11 @@ nav a:hover::after{
 
 /* ================= SUMMARY ================= */
 .summary h2{
-  font-size:34px;       /* 🔑 större rubrik */
+  font-size:34px;
 }
 
 .summary p{
-  font-size:20px;       /* 🔑 brödtext */
+  font-size:20px;
 }
 
 /* ================= HERITAGE STORY ================= */
@@ -128,7 +170,7 @@ nav a:hover::after{
   padding:0 10px;
 
   font-style:italic;
-  font-size:19px;       /* 🔑 lättläst vintage-text */
+  font-size:19px;
   line-height:2;
 
   color:var(--dark);
@@ -146,6 +188,5 @@ footer{
   text-align:center;
   padding:26px;
   margin-top:70px;
-
   font-size:18px;
 }
